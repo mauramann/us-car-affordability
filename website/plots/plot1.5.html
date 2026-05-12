@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-267b65d4c32b6053782fa7942dd681c7"}, "mark": {"type": "bar", "color": "#301934"}, "encoding": {"tooltip": [{"field": "year", "title": "Year", "type": "quantitative"}, {"field": "difference", "title": "Income Difference ($)", "type": "quantitative"}], "x": {"axis": {"labelFontSize": 9, "titleFontSize": 14}, "field": "year", "title": "Year", "type": "nominal"}, "y": {"axis": {"labelFontSize": 11, "titleFontSize": 14}, "field": "difference", "title": "U.S. Dollars ($)", "type": "quantitative"}}, "height": 300, "title": {"text": "Real Median Family Income Difference In The U.S. (1960-2024)", "fontSize": 16}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-267b65d4c32b6053782fa7942dd681c7": [{"observation_date": "1960-01-01", "median_income": 48760, "year": 1960, "difference": 0.0}, {"observation_date": "1961-01-01", "median_income": 49270, "year": 1961, "difference": 510.0}, {"observation_date": "1962-01-01", "median_income": 50670, "year": 1962, "difference": 1400.0}, {"observation_date": "1963-01-01", "median_income": 52400, "year": 1963, "difference": 1730.0}, {"observation_date": "1964-01-01", "median_income": 54550, "year": 1964, "difference": 2150.0}, {"observation_date": "1965-01-01", "median_income": 56700, "year": 1965, "difference": 2150.0}, {"observation_date": "1966-01-01", "median_income": 59710, "year": 1966, "difference": 3010.0}, {"observation_date": "1967-01-01", "median_income": 60950, "year": 1967, "difference": 1240.0}, {"observation_date": "1968-01-01", "median_income": 63790, "year": 1968, "difference": 2840.0}, {"observation_date": "1969-01-01", "median_income": 66870, "year": 1969, "difference": 3080.0}, {"observation_date": "1970-01-01", "median_income": 66700, "year": 1970, "difference": -170.0}, {"observation_date": "1971-01-01", "median_income": 66680, "year": 1971, "difference": -20.0}, {"observation_date": "1972-01-01", "median_income": 69730, "year": 1972, "difference": 3050.0}, {"observation_date": "1973-01-01", "median_income": 71240, "year": 1973, "difference": 1510.0}, {"observation_date": "1974-01-01", "median_income": 69450, "year": 1974, "difference": -1790.0}, {"observation_date": "1975-01-01", "median_income": 68170, "year": 1975, "difference": -1280.0}, {"observation_date": "1976-01-01", "median_income": 70310, "year": 1976, "difference": 2140.0}, {"observation_date": "1977-01-01", "median_income": 70680, "year": 1977, "difference": 370.0}, {"observation_date": "1978-01-01", "median_income": 72900, "year": 1978, "difference": 2220.0}, {"observation_date": "1979-01-01", "median_income": 73940, "year": 1979, "difference": 1040.0}, {"observation_date": "1980-01-01", "median_income": 71470, "year": 1980, "difference": -2470.0}, {"observation_date": "1981-01-01", "median_income": 69470, "year": 1981, "difference": -2000.0}, {"observation_date": "1982-01-01", "median_income": 68570, "year": 1982, "difference": -900.0}, {"observation_date": "1983-01-01", "median_income": 69030, "year": 1983, "difference": 460.0}, {"observation_date": "1984-01-01", "median_income": 71250, "year": 1984, "difference": 2220.0}, {"observation_date": "1985-01-01", "median_income": 72300, "year": 1985, "difference": 1050.0}, {"observation_date": "1986-01-01", "median_income": 75550, "year": 1986, "difference": 3250.0}, {"observation_date": "1987-01-01", "median_income": 76830, "year": 1987, "difference": 1280.0}, {"observation_date": "1988-01-01", "median_income": 77010, "year": 1988, "difference": 180.0}, {"observation_date": "1989-01-01", "median_income": 78410, "year": 1989, "difference": 1400.0}, {"observation_date": "1990-01-01", "median_income": 77260, "year": 1990, "difference": -1150.0}, {"observation_date": "1991-01-01", "median_income": 75790, "year": 1991, "difference": -1470.0}, {"observation_date": "1992-01-01", "median_income": 75220, "year": 1992, "difference": -570.0}, {"observation_date": "1993-01-01", "median_income": 74170, "year": 1993, "difference": -1050.0}, {"observation_date": "1994-01-01", "median_income": 76170, "year": 1994, "difference": 2000.0}, {"observation_date": "1995-01-01", "median_income": 77920, "year": 1995, "difference": 1750.0}, {"observation_date": "1996-01-01", "median_income": 79070, "year": 1996, "difference": 1150.0}, {"observation_date": "1997-01-01", "median_income": 81560, "year": 1997, "difference": 2490.0}, {"observation_date": "1998-01-01", "median_income": 84380, "year": 1998, "difference": 2820.0}, {"observation_date": "1999-01-01", "median_income": 86370, "year": 1999, "difference": 1990.0}, {"observation_date": "2000-01-01", "median_income": 86740, "year": 2000, "difference": 370.0}, {"observation_date": "2001-01-01", "median_income": 85960, "year": 2001, "difference": -780.0}, {"observation_date": "2002-01-01", "median_income": 85350, "year": 2002, "difference": -610.0}, {"observation_date": "2003-01-01", "median_income": 85230, "year": 2003, "difference": -120.0}, {"observation_date": "2004-01-01", "median_income": 85320, "year": 2004, "difference": 90.0}, {"observation_date": "2005-01-01", "median_income": 86190, "year": 2005, "difference": 870.0}, {"observation_date": "2006-01-01", "median_income": 87060, "year": 2006, "difference": 870.0}, {"observation_date": "2007-01-01", "median_income": 89170, "year": 2007, "difference": 2110.0}, {"observation_date": "2008-01-01", "median_income": 86250, "year": 2008, "difference": -2920.0}, {"observation_date": "2009-01-01", "median_income": 84580, "year": 2009, "difference": -1670.0}, {"observation_date": "2010-01-01", "median_income": 83640, "year": 2010, "difference": -940.0}, {"observation_date": "2011-01-01", "median_income": 82110, "year": 2011, "difference": -1530.0}, {"observation_date": "2012-01-01", "median_income": 82230, "year": 2012, "difference": 120.0}, {"observation_date": "2013-01-01", "median_income": 85470, "year": 2013, "difference": 3240.0}, {"observation_date": "2014-01-01", "median_income": 85760, "year": 2014, "difference": 290.0}, {"observation_date": "2015-01-01", "median_income": 91060, "year": 2015, "difference": 5300.0}, {"observation_date": "2016-01-01", "median_income": 92830, "year": 2016, "difference": 1770.0}, {"observation_date": "2017-01-01", "median_income": 95520, "year": 2017, "difference": 2690.0}, {"observation_date": "2018-01-01", "median_income": 96730, "year": 2018, "difference": 1210.0}, {"observation_date": "2019-01-01", "median_income": 104200, "year": 2019, "difference": 7470.0}, {"observation_date": "2020-01-01", "median_income": 101200, "year": 2020, "difference": -3000.0}, {"observation_date": "2021-01-01", "median_income": 101700, "year": 2021, "difference": 500.0}, {"observation_date": "2022-01-01", "median_income": 98870, "year": 2022, "difference": -2830.0}, {"observation_date": "2023-01-01", "median_income": 103400, "year": 2023, "difference": 4530.0}, {"observation_date": "2024-01-01", "median_income": 105800, "year": 2024, "difference": 2400.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

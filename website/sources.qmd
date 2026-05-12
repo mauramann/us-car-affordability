@@ -1,0 +1,32 @@
+---
+title: "References"
+format: html
+---
+
+## Data Sources
+
+Board of Governors of the Federal Reserve System (US), Motor Vehicle Loans Owned and Securitized (DISCONTINUED) [MVLOAS], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MVLOAS, May 11, 2026.
+
+Federal Reserve Bank of St. Louis, Spot Crude Oil Price: West Texas Intermediate (WTI) [WTISPLC], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/WTISPLC, May 6, 2026.
+
+Federal Reserve Bank of Minneapolis, Consumer Price Index, 1913-, retrieved from Minneapolis FED, Federal Reserve Bank of Minneapolis; https://www.minneapolisfed.org/about-us/monetary-policy/inflation-calculator/consumer-price-index-1913-, May 8, 2026.
+
+U.S. Bureau of Labor Statistics; Motor vehicle insurance in U.S. city average, all urban consumers, not seasonally adjusted; retrieved from U.S. Bureau of Labor Statistics; https://data.bls.gov/pdq/SurveyOutputServlet, May 6, 2026.
+
+U.S. Census Bureau, Real Median Family Income in the United States [MEFAINUSA672N], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/MEFAINUSA672N, May 6, 2026.
+
+U.S. Department of Commerce, Census Bureau, Decennial Census and American Community Survey, available at https://data.census.gov/cedsci/ as of September 2022.
+
+## Article Sources
+
+Brock, Catherine. 2026. “Minimum Car Insurance Requirements in All 50 u.s. States.” Yahoo Finance, https://finance.yahoo.com/personal-finance/insurance/article/state-minimum-car-insurance-233457321.html. 
+
+Campbell, Josephine. 2023. “1950s Car Culture.” EBSCO, https://www.ebsco.com/research-starters/history/1950s-car-culture.
+
+Lacy, Robert. 2003. “The Automotive Industry’s Sweeping Effects on the Fifth District.” Econ Focus Federal Reserve Bank Of Richmond, https://www.richmondfed.org/publications/research/econ_focus/2003/winter/economic_history.
+
+Reserve Bank of St. Louis, FRED Federal. 2025. “Real Median Family Income in the United States,” https://fred.stlouisfed.org/series/MEFAINUSA672N.
+
+## Image Sources
+
+Ivkovic, Farva. "20 Most Significant Cars In American History." History Snob, https://www.historysnob.com/eras/20-most-significant-cars-american-history/22.

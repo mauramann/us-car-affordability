@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "bar"}, "encoding": {"color": {"field": "cars", "legend": {"labelFontSize": 12, "titleFontSize": 12}, "scale": {"domain": ["0 vehicles", "1 vehicle", "2 vehicles", "3 or more vehicles"], "range": ["#A42A04", "#0047AB", "#301934", "#722F37"]}, "title": "Vehicles", "type": "nominal"}, "tooltip": [{"field": "ownership_perc", "title": "Percent (%)", "type": "quantitative"}], "x": {"axis": {"labelFontSize": 12, "titleFontSize": 14}, "field": "year", "title": "Year", "type": "nominal"}, "y": {"axis": {"labelFontSize": 12, "titleFontSize": 14}, "field": "ownership_perc", "scale": {"domain": [0, 75]}, "title": "Percent of Households with Vehicles (%)", "type": "quantitative"}}, "name": "view_3d5f22f85617f5b7_0", "title": {"text": "Household Vehicle Ownership (1960-2023)", "fontSize": 16}, "transform": [{"filter": {"param": "param_551e7871a69612e6"}}]}, {"mark": {"type": "line", "color": "#71797E", "strokeDash": [5, 3], "strokeWidth": 3}, "encoding": {"x": {"field": "year", "title": "Year", "type": "nominal"}, "y": {"field": "ownership_perc", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_551e7871a69612e6"}}, {"on": "year", "regression": "ownership_perc"}]}], "data": {"name": "data-6fef521898b23935f65f2932341371ac"}, "params": [{"name": "param_551e7871a69612e6", "select": {"type": "point", "fields": ["cars"]}, "bind": {"input": "select", "options": ["0 vehicles", "1 vehicle", "2 vehicles", "3 or more vehicles"], "name": "Select Vehicle Number "}, "value": "0 vehicles", "views": ["view_3d5f22f85617f5b7_0"]}], "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-6fef521898b23935f65f2932341371ac": [{"cars": "0 vehicles", "year": 1960, "ownership_perc": 21.5}, {"cars": "1 vehicle", "year": 1960, "ownership_perc": 57.0}, {"cars": "2 vehicles", "year": 1960, "ownership_perc": 19.1}, {"cars": "3 or more vehicles", "year": 1960, "ownership_perc": 2.5}, {"cars": "0 vehicles", "year": 1970, "ownership_perc": 17.5}, {"cars": "1 vehicle", "year": 1970, "ownership_perc": 47.7}, {"cars": "2 vehicles", "year": 1970, "ownership_perc": 29.3}, {"cars": "3 or more vehicles", "year": 1970, "ownership_perc": 5.5}, {"cars": "0 vehicles", "year": 1980, "ownership_perc": 12.9}, {"cars": "1 vehicle", "year": 1980, "ownership_perc": 35.5}, {"cars": "2 vehicles", "year": 1980, "ownership_perc": 34.0}, {"cars": "3 or more vehicles", "year": 1980, "ownership_perc": 17.5}, {"cars": "0 vehicles", "year": 1990, "ownership_perc": 11.5}, {"cars": "1 vehicle", "year": 1990, "ownership_perc": 33.7}, {"cars": "2 vehicles", "year": 1990, "ownership_perc": 37.4}, {"cars": "3 or more vehicles", "year": 1990, "ownership_perc": 17.4}, {"cars": "0 vehicles", "year": 2000, "ownership_perc": 10.3}, {"cars": "1 vehicle", "year": 2000, "ownership_perc": 34.2}, {"cars": "2 vehicles", "year": 2000, "ownership_perc": 38.4}, {"cars": "3 or more vehicles", "year": 2000, "ownership_perc": 17.1}, {"cars": "0 vehicles", "year": 2010, "ownership_perc": 9.1}, {"cars": "1 vehicle", "year": 2010, "ownership_perc": 33.8}, {"cars": "2 vehicles", "year": 2010, "ownership_perc": 37.6}, {"cars": "3 or more vehicles", "year": 2010, "ownership_perc": 19.5}, {"cars": "0 vehicles", "year": 2021, "ownership_perc": 8.0}, {"cars": "1 vehicle", "year": 2021, "ownership_perc": 32.9}, {"cars": "2 vehicles", "year": 2021, "ownership_perc": 37.1}, {"cars": "3 or more vehicles", "year": 2021, "ownership_perc": 21.9}, {"cars": "0 vehicles", "year": 2022, "ownership_perc": 8.3}, {"cars": "1 vehicle", "year": 2022, "ownership_perc": 33.2}, {"cars": "2 vehicles", "year": 2022, "ownership_perc": 36.9}, {"cars": "3 or more vehicles", "year": 2022, "ownership_perc": 21.6}, {"cars": "0 vehicles", "year": 2023, "ownership_perc": 8.4}, {"cars": "1 vehicle", "year": 2023, "ownership_perc": 33.3}, {"cars": "2 vehicles", "year": 2023, "ownership_perc": 36.5}, {"cars": "3 or more vehicles", "year": 2023, "ownership_perc": 21.7}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

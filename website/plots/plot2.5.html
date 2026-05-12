@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"mark": {"type": "line", "color": "#722F37", "point": {"color": "#722F37", "filled": true, "size": 80}, "strokeWidth": 3}, "encoding": {"tooltip": [{"field": "year", "title": "Year", "type": "quantitative"}, {"field": "vehicle", "title": "Percent (%)", "type": "quantitative"}], "x": {"axis": {"labels": false, "ticks": false, "title": null}, "field": "year", "type": "quantitative"}, "y": {"axis": {"labelFontSize": 12, "titleFontSize": 12}, "field": "vehicle", "title": "Percent of Households with 0 Vehicles (%)", "type": "quantitative"}}, "height": 300, "title": {"text": "Household Vehicle Ownership (0 Vehicles)", "fontSize": 16}, "width": 525}, {"mark": {"type": "line", "color": "#722F37", "point": {"color": "#722F37", "filled": true, "size": 80}, "strokeWidth": 3}, "encoding": {"tooltip": [{"field": "year", "title": "Year", "type": "quantitative"}, {"field": "Value", "title": "U.S. Dollars (Millions)", "type": "quantitative"}], "x": {"axis": {"format": ".0f", "titleFontSize": 14}, "field": "year", "title": "Year", "type": "quantitative"}, "y": {"axis": {"labelFontSize": 12, "titleFontSize": 12}, "field": "Value", "title": "U.S. Dollars (Millions)", "type": "quantitative"}}, "height": 300, "title": {"text": "Total U.S. Motor Vehicle Loans (Inflation Adjusted)", "fontSize": 16}, "width": 525}], "data": {"name": "data-d66434c52afbc3fe2a82d7819c3b3082"}, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-d66434c52afbc3fe2a82d7819c3b3082": [{"Date": "1960-01-01", "Value": 181722420000.0, "year": 1960, "vehicle": 21.5}, {"Date": "1970-01-01", "Value": 299965760000.0, "year": 1970, "vehicle": 17.5}, {"Date": "1980-01-01", "Value": 453442220000.0, "year": 1980, "vehicle": 12.9}, {"Date": "1990-01-01", "Value": 708659120000.0, "year": 1990, "vehicle": 11.5}, {"Date": "2000-01-01", "Value": 967961890000.0, "year": 2000, "vehicle": 10.3}, {"Date": "2010-01-01", "Value": 1044007200000.0, "year": 2010, "vehicle": 9.1}, {"Date": "2021-01-01", "Value": 1487955020000.0, "year": 2021, "vehicle": 8.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

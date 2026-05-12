@@ -1,0 +1,12 @@
+---
+title: "LLM Usage Log"
+format: html
+---
+
+This page was used during the course of the project to log all instances of LLM usage.
+
+## Brainstorming
+
+* Find relevant articles to help orient myself with car industry trends
+* Understanding how to interpret price inflation statistics
+* Understanding CPI percentage changes on a large-level and what impacts them
